@@ -36,6 +36,32 @@
             
         }
     ],
+    
+    "subPackages": [
+      {
+        "root": "subpkg",
+        "pages": [
+          {
+                    "path" : "goods_detail/goods_detail",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "goods_list/goods_list",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+      }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -58,11 +84,23 @@
       },
       {
         "pagePath": "pages/cart/cart",
-        "text": "cart",
+        "text": "分类",
+        "iconPath": "static/tab_icons/cate.png",
+        "selectedIconPath": "static/tab_icons/cate-active.png"   
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "text": "购物车",
         "iconPath": "static/tab_icons/cart.png",
         "selectedIconPath": "static/tab_icons/cart-active.png"   
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tab_icons/my.png",
+        "selectedIconPath": "static/tab_icons/my-active.png"   
       }
     ]
-  }
+  } 
   
 }
