@@ -1,5 +1,10 @@
 <template>
   <view>
+    <!-- 搜索组件 -->
+    <view class="search-box">
+      <my-search @click="gotoSearch"></my-search>
+    </view>
+    
     <!-- 使用usw生成轮播图区域的代码片段 -->
     <swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
       <!-- item是每次循环的项 i是循环的索引 -->
@@ -105,6 +110,11 @@
         }) 
         
         this.floorList=res.message;
+        },
+        gotoSearch(){
+          uni.navigateTo({
+            url:'/subpkg/search/search'
+          })
         }
     }
   }
@@ -143,5 +153,10 @@
   .floor-img-box{
     display: flex;
     padding: 10rpx;
+  }
+  .search-box{
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
 </style>
